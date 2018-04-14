@@ -1461,6 +1461,7 @@ $(document).ready(function(){
 	html = html + "<button class=tagbutton style='float: left;'>稻香村</button> &nbsp;";
 	html = html + "<button class=tagbutton style='float: left;'>道德經</button> &nbsp;";
 	
+	html = html + "<button id=CSearch style='float: left;'>Sea</button> &nbsp;";
 	
 	html = html + "<table id='table_id' class='display'>";
 
@@ -1494,6 +1495,9 @@ $(document).ready(function(){
 	$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "300px","scrollCollapse": true,"paging": false});</'+'script>');
 	
 	$( "#output1" ).append('<script>$(".tagbutton").click(function() {$("#table_id").DataTable().search($(this).text()).draw();});</'+'script>');
+	$( "#output1" ).append('<script>$("#CSearch").click(function() {$("#table_id").DataTable().search($(".dataTables_filter input").val()).draw();});</'+'script>');
+	//CSearch
+	//alert($(".dataTables_filter input").val());
 
 	$('#textarea1').hide();
 });
