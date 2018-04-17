@@ -1,7 +1,18 @@
-data={
-	["user"] = {
-		["username"]    = "TestUser",
-	},
-    ["title"] = "TestTitle,
-    ["update_time"] = "",
+{
+	"data":[
+		[1]:[
+			"user": [
+				"username": "TestUser",
+			],
+			"title": "TestTitle",
+			"update_time": "",
+		],
+		[2] = [
+			"user": [
+				"username": "TestUser2",
+			],
+			"title": "TestTitle2",
+			"update_time": "",
+		],
+	]
 }
