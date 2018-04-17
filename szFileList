@@ -1,18 +1,14 @@
 {
-	"data":[
-		[1]:[
-			"user": [
-				"username": "TestUser",
-			],
-			"title": "TestTitle",
-			"update_time": "",
-		],
-		[2] = [
-			"user": [
-				"username": "TestUser2",
-			],
-			"title": "TestTitle2",
-			"update_time": "",
-		],
-	]
+  "data": [
+    {
+      "user": {"username":"111"},
+      "title": "TestTitle",
+      "update_time": ""
+    }
+    {
+      "user": {"username":"112"},
+      "title": "TestTitle2",
+      "update_time": ""
+    }
+  ]
 }
