@@ -1549,15 +1549,6 @@ $(document).ready(function(){
 	
 	html = html + "<tbody>";
 	
-
-    var filePath = "./questions.txt";
-    $.ajax({
-        url: filePath
-    }).done(function(data){
-        $( "#textarea1" ).load( data );
-    });
-	
-	
 	var lines = $('#textarea1').val().split('\n');
 	for(var i = 0;i < lines.length;i++){	
 		html = html + "<tr>";
