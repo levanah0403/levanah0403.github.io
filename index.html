@@ -1549,6 +1549,9 @@ $(document).ready(function(){
 	
 	html = html + "<tbody>";
 	
+
+	$( "#textarea1" ).load( "./questions.txt" );
+	
 	var lines = $('#textarea1').val().split('\n');
 	for(var i = 0;i < lines.length;i++){	
 		html = html + "<tr>";
