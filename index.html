@@ -10,7 +10,10 @@
 
 
 <script type="text/javascript">
-
+function addTagButton (id, groupName, value) {
+	return '<label for="' + id + '">' + value + '</label>' + '<input class=tagradio type="radio" name="'+ groupName + '" id="'+ id +'" value="'+ value +'">';
+}	
+	
 (function(window, $) {
 	//https://docs.google.com/spreadsheets/d/1aaEt-mK1HjxOOBf6FFsVelNV9GCurVgcVMOPjmNsPj0/edit#gid=0
 	var sheetID = "1aaEt-mK1HjxOOBf6FFsVelNV9GCurVgcVMOPjmNsPj0", // 試算表代號
@@ -26,6 +29,26 @@
 		html = "",
 		i, j, dataGroup, dataLength;
 
+	//	html = html + '<fieldset>';
+		html = html + addTagButton("radio-1", "radio-1", "青岩");
+		html = html + addTagButton("radio-2", "radio-1", "論語");
+		html = html + addTagButton("radio-3", "radio-1", "少林");
+		html = html + addTagButton("radio-4", "radio-1", "南華");
+		html = html + addTagButton("radio-5", "radio-1", "太白");
+		html = html + addTagButton("radio-6", "radio-1", "綠書");
+		html = html + addTagButton("radio-7", "radio-1", "綁定");
+		html = html + addTagButton("radio-8", "radio-1", "天竺");
+		html = html + addTagButton("radio-9", "radio-1", "寶鑑");
+		html = html + "<BR><BR>";
+		html = html + addTagButton("radio-10", "radio-1", "純陽");
+		html = html + addTagButton("radio-11", "radio-1", "孔子");
+		html = html + addTagButton("radio-12", "radio-1", "屈原");
+		html = html + addTagButton("radio-13", "radio-1", "浩氣");
+		html = html + addTagButton("radio-14", "radio-1", "大唐");
+		html = html + addTagButton("radio-15", "radio-1", "稻香村");
+		html = html + addTagButton("radio-16", "radio-1", "道德經");
+	//	html = html + '</fieldset>';
+		
 		html = html + "<button class=tagbutton style='float: left;'>青岩</button>";
 		html = html + "<button class=tagbutton style='float: left;'>論語</button>";
 		html = html + "<button class=tagbutton style='float: left;'>少林</button>";
@@ -78,6 +101,8 @@
 		$( "#output1" ).append( html );
 		$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "500px","scrollCollapse": true,"paging": false});</'+'script>');
 		$( "#output1" ).append('<script>$(".tagbutton").click(function() {$("#table_id").DataTable().search($(this).text()).draw();});</'+'script>');
+		$( "#output1" ).append('<script>$(".tagradio").checkboxradio();</'+'script>');
+		$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
 	};
 })(window, jQuery);
 </script>
