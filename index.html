@@ -51,25 +51,7 @@ function addTagButton (id, groupName, value) {
 		html = html + addTagButton("radio-15", "radio-1", "稻香村");
 		html = html + addTagButton("radio-16", "radio-1", "道德經");
 	//	html = html + '</fieldset>';
-		
-		html = html + "<button class=tagbutton style='float: left;'>青岩</button>";
-		html = html + "<button class=tagbutton style='float: left;'>論語</button>";
-		html = html + "<button class=tagbutton style='float: left;'>少林</button>";
-		html = html + "<button class=tagbutton style='float: left;'>南華</button>";
-		html = html + "<button class=tagbutton style='float: left;'>太白</button>";
-		html = html + "<button class=tagbutton style='float: left;'>綠書</button>";
-		html = html + "<button class=tagbutton style='float: left;'>綁定</button>";
-		html = html + "<button class=tagbutton style='float: left;'>天竺</button>";
-		html = html + "<button class=tagbutton style='float: left;'>寶鑑</button>";
-		html = html + "<BR><BR>";
-		html = html + "<button class=tagbutton style='float: left;'>純陽</button>";
-		html = html + "<button class=tagbutton style='float: left;'>孔子</button>";
-		html = html + "<button class=tagbutton style='float: left;'>屈原</button>";
-		html = html + "<button class=tagbutton style='float: left;'>浩氣</button>";
-		html = html + "<button class=tagbutton style='float: left;'>大唐</button>";
-		html = html + "<button class=tagbutton style='float: left;'>稻香村</button>";
-		html = html + "<button class=tagbutton style='float: left;'>道德經</button>";
-		
+			
 		html = html + "<table id='table_id' class='display'>";
 
 		html = html + "<thead>";
@@ -103,7 +85,6 @@ function addTagButton (id, groupName, value) {
 		$( "#output1" ).html("");
 		$( "#output1" ).append( html );
 		$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "500px","scrollCollapse": true,"paging": false});</'+'script>');
-		$( "#output1" ).append('<script>$(".tagbutton").click(function() {$("#table_id").DataTable().search($(this).text()).draw();});</'+'script>');
 		$( "#output1" ).append('<script>$(".tagradio").checkboxradio();</'+'script>');
 		$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
 	};
