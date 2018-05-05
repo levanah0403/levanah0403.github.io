@@ -35,7 +35,6 @@ function addTagButton (id, groupName, value) {
 	//	html = html + '<fieldset>';
 		html = html + addTagButton("radio-1", "radio-1", "青岩");
 		html = html + addTagButton("radio-2", "radio-1", "論語");
-		html = html + addTagButton("radio-3", "radio-1", "少林");
 		html = html + addTagButton("radio-4", "radio-1", "南華");
 		html = html + addTagButton("radio-5", "radio-1", "太白");
 		html = html + addTagButton("radio-6", "radio-1", "綠書");
@@ -51,6 +50,11 @@ function addTagButton (id, groupName, value) {
 		html = html + addTagButton("radio-15", "radio-1", "稻香村");
 		html = html + addTagButton("radio-16", "radio-1", "道德經");
 	//	html = html + '</fieldset>';
+		
+		html = html + '<fieldset>';
+		html = html + addTagButton("radio-1-1", "radio-1", "少林");
+		html = html + addTagButton("radio-1-2", "radio-1", "萬花");
+		html = html + '</fieldset>';
 			
 		html = html + "<table id='table_id' class='display'>";
 
