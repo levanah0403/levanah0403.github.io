@@ -110,7 +110,7 @@ function addTagButton (id, groupName, value) {
 		
 		$( "#output1" ).html("");
 		$( "#output1" ).append( html );
-		$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "400px","scrollCollapse": true,"paging": false});</'+'script>');
+		$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "400px","scrollCollapse": true,"paging": false,"language": {"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Chinese-traditional.json"}});</'+'script>');
 		$( "#output1" ).append('<script>$(".tagradio").checkboxradio();</'+'script>');
 		$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
 	};
