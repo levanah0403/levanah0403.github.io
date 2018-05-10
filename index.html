@@ -10,7 +10,47 @@
 	
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	
+<link rel="stylesheet" type="text/css" href="css/navigation.css">
 </head>
+
+
+<div id="main">
+	<div class="container">
+		<nav>
+			<div class="navigation">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="#" tabindex="1">連結<span class="arrow-down"></span></a>
+						<ul class="dropdown">
+							<li><a href="https://www.j3pz.com/">劍網三配裝器</a></li>
+							<li><a href="http://jx3yymj.com/">隱元秘鑑</a></li>
+						</ul>
+					</li>
+					<li><a href="#" tabindex="1">下載<span class="arrow-down"></span></a>
+						<ul class="dropdown">
+							<li><a href="http://jx3download.molome.tw/interface.rar">官方插件下載</a></li>
+							<li><a href="data/nangongbo_180504.jx3dat">茗伊目標監控南宮伯數據180504</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="nav_bg">
+				<div class="nav_bar"> <span></span> <span></span> <span></span> </div>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+		$('.nav_bar').click(function(){
+			$('.navigation').toggleClass('visible');
+			$('body').toggleClass('opacity');
+		});
+	});
+</script>
+
 
 <div id=output1 style="width:80%;margin: auto;" > Loading... </div>
 <br>
