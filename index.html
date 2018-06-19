@@ -105,6 +105,15 @@ function addTagButton (id, groupName, value) {
 		html = html + addTagButton("radio-9", "radio-1", "寶鑑");
 		html = html + addTagButton("radio-11", "radio-1", "孔子");
 		html = html + addTagButton("radio-16", "radio-1", "道德經");
+		html = html + "<BR>";
+		html = html + addTagButton("radio-21", "radio-2", "卷一");
+		html = html + addTagButton("radio-22", "radio-2", "卷二");
+		html = html + addTagButton("radio-23", "radio-2", "卷三");
+		html = html + addTagButton("radio-24", "radio-2", "卷四");
+		html = html + addTagButton("radio-25", "radio-2", "卷五");
+		html = html + addTagButton("radio-26", "radio-2", "卷六");
+		html = html + addTagButton("radio-27", "radio-2", "卷七");
+		html = html + addTagButton("radio-28", "radio-2", "卷八");
 	//	html = html + '<legend>書籍: </legend>';
 	//	html = html + '</fieldset>';
 		
@@ -162,7 +171,9 @@ function addTagButton (id, groupName, value) {
 		$( "#output1" ).append( html );
 		$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "400px","scrollCollapse": true,"paging": false});</'+'script>');
 		$( "#output1" ).append('<script>$(".tagradio").checkboxradio();</'+'script>');
-		$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
+	//	$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
+		$( "#output1" ).append('<script>$("input[name=radio-1]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()).draw();});</'+'script>');
+		$( "#output1" ).append('<script>$("input[name=radio-2]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()+" "+$("input[name=radio-2]:checked").val()).draw();});</'+'script>');
 	};
 })(window, jQuery);
 </script>
