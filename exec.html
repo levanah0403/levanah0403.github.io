@@ -32,7 +32,7 @@
         function Send(output){    
             $.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", { 
                         "act": "Send",
-                        "question" : document.getElementById("questionInput").value,
+                        "question" : document.getElementById("questionInput").value
                     },
                     function (data) {
                         $( "#"+output ).html(data);
