@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <input type="button" value="List" onclick="List('idDivOutput')"><br><br>
+    question: <input type="text" id="questionInput"><br><br>
+    <input type="button" value="Send" onclick="Send()"><br><br>
+    
+    <div id=idDivOutput > </div>
+    
+    <script type="text/javascript">
+        function Search(){
+            $.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", {
+                        "act": "Search",
+                        "question": document.getElementById("questionInput").value
+                    },
+                    function (data) {
+                        $( "#"+output ).html(data);
+                    });
+        }
+        function List(output){
+            $.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", {
+                        "act": "List",
+                        "question": document.getElementById("questionInput").value
+                    },
+                    function (data) {
+                        $( "#"+output ).html(data);
+                    });
+        }
+        function Send(output){    
+            $.get("https://script.google.com/macros/s/AKfycbxfmhOJ5RuiJIdEjWfEzk6a6p2AiYfDm8SR2xec8UziskOpbmo/exec", {   
+                        "act": "Send",
+                        "question" : document.getElementById("questionInput").value,
+                    },
+                    function (data) {
+                        $( "#"+output ).html(data);
+                    });
+        }
+    </script>
+</body>
+</html>
