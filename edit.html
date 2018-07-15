@@ -7,7 +7,7 @@
 <body>
     <!-- input type="button" value="List" onclick="List('idDivOutput')"><br><br -->
     題目: <input type="text" id="questionInput">
-    <input type="button" value="新增" onclick="Send('idDivOutput')"><br><br>
+    <input type="button" value="新增" onclick="Edit('idDivOutput')"><br><br>
     
     <div id=idDivOutput > </div>
     
@@ -24,15 +24,15 @@
         function List(output){
             $.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", {
                         "act": "List",
-                        "question": document.getElementById("questionInput").value
                     },
                     function (data) {
                         $( "#"+output ).html(data);
                     });
         }
-        function Send(output){    
+        function Edit(output){    
             $.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", { 
-                        "act": "Send",
+                        "act": "Edit",
+                        "idx": -1,
                         "question" : document.getElementById("questionInput").value
                     },
                     function (data) {
