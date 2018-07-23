@@ -66,7 +66,6 @@ $(document).ready(function(){
 	<div style="width:100%;margin: auto;border-radius: 10px;background: #FFFFAA;padding: 20px;" >	
 		若要協助更新題庫請在此提交未在題庫內的問題<br>
 		題目: <input type="text" id="questionInput" style="width:80%">
-		<!-- input type="button" value="新增題庫" onclick="Edit('idDivOutput')" -->
 		<button id=submitbutton>新增題庫</button><br>
 		提交格式:<font color=red>題目：答案</font><br>
 		<div id=idDivOutput> </div>
@@ -197,7 +196,6 @@ function addTagButton (id, groupName, value) {
 				html += "<td>" + i + "</td>";
 				html += "<td>" + (dataGroup[j].f || dataGroup[j].v || "") + " </td>";
 			}
-		//	html += "<br/>";
 			html = html + "</tr>";
 		}
 		
