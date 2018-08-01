@@ -56,7 +56,9 @@ $(document).ready(function(){
 </script>
 
 
-<div id=output1 style="width:80%;margin: auto;" > Loading... </div>
+<div id=loadingdiv style="position: absolute;top: 50%;left: 50%;z-index:9999;" > <img id=loadingpic src="img/loading.svg"> </div>
+<div id=output1 style="width:80%;margin: auto;" > &nbsp; </div>
+
 <br>
 <br>
 
@@ -210,6 +212,7 @@ function addTagButton (id, groupName, value) {
 	//	$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
 		$( "#output1" ).append('<script>$("input[name=radio-1]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()).draw();});</'+'script>');
 		$( "#output1" ).append('<script>$("input[name=radio-2]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()+" "+$("input[name=radio-2]:checked").val()).draw();});</'+'script>');
+		$( "#loadingdiv" ).fadeOut(3000);
 	};
 })(window, jQuery);
 </script>
