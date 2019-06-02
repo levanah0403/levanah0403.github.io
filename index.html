@@ -94,6 +94,8 @@ $(document).ready(function(){
 		},
 		function (data) {
 			$( "#"+output ).html(data);
+			console.log("submit success");
+			$( "#dialog" ).dialog();
 		});
         }
 </script>
@@ -105,6 +107,9 @@ $(document).ready(function(){
 	<div style="float: right"><!-- img src="img/122942084.jpeg" width=20 hright=20 -->抹茶@江海雲夢</div>
 </div>
 
+<div id="dialog" title="Message" style="display:none;">
+	<p>提交成功.</p>
+</div>
 
 <script type="text/javascript">
 function addTagButton (id, groupName, value) {
