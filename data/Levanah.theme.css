@@ -1,4 +1,6 @@
-//META{"name":"Levanah","description":"A theme based on Google's Material Design","author":"CapnKitten/Levanah","version":"1.0.0"}*//{}
+//META{"name":"Levanah Test","description":"A theme based on Google's Material Design","author":"CapnKitten/Levanah","version":"1.0.1"}*//{}
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap);
 
 :root {
 	--accent-color: #ff0000;
@@ -18,21 +20,25 @@
 	--alert-color: #f04747;
 	--alert-color-hover: #f74a4a;
 	--alert-color-active: #fa5c5c;
-	/* 抬頭+頻道 */
-	--main-color: #16171a;
-	/* --main-color: rgba(22,23,26,1); */
+	/* 伺服器名稱 */
+	--main-color: rgb(29,30,33);
 
 	/* 視窗標題 */
-	--main-alt: #16171a;
+	--main-alt: rgb(60,60,60);
 	/* 聊天泡泡 */
 	--message-color: rgba(0,0,0,0.45);
 	--message-alt: #1c1e21;
+
+	/* 頻道列表 */
+	--channel-list-color: rgb(42,43,46);
+	/* 頻道標題 */
+	--channel-title-color: rgb(42,43,46);
 
 	--code-color: #1d1e21;
 
 	/* 對話背景 */
 	/*--chat-color: #202225;*/
-	--chat-color: url("https://levanah0403.github.io/data/back.png") center;
+	--chat-color: url("https://levanah0403.github.io/data/back.png") center fixed;
 
 	/* --popout-color: rgba(32,34,37,0.1); */
 	--popout-color: #202225;
@@ -48,17 +54,17 @@
 
 	--input-color: #272a2e;
 	/* 滑過顏色 */
-	--hover-color: rgba(255,255,255,0.55);
+	--hover-color: rgba(255,255,255,0.40);
 	/* 點選顏色 */
 	--select-color: rgba(255,0,0,1);
 
 	/* 頻道滑過色彩 */
-	--menu-item-hover: rgba(255,255,255,0.55);
+	--menu-item-hover: rgba(255,255,255,0.40);
 	/* 頻道點選色彩 */
-	--menu-item-select: rgba(255,0,0,1);
+	--menu-item-select: #ff0000;
 
-	--server-item-hover: rgba(255,255,255,0.55);
-	--server-item-select: rgba(255,0,0,1);
+	--server-item-hover: rgba(255,255,255,0.40);
+	--server-item-select: rgba(255,0,0,0.40);
 
 	--border-radius-none: 0px;
 	--border-radius: 4px;
@@ -72,6 +78,9 @@
 	--shadow-1dp: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
 	--shadow-2dp: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
 	--shadow-3dp: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+
+	--shadow-channel-title: 0 4px 10px 1px rgba(0,0,0,0.44), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+	--shadow-channel-header: 8px 4px 10px 1px rgba(0,0,0,0.44), 3px 3px 14px 2px rgba(0,0,0,0.12), 5px 5px 5px -3px rgba(0,0,0,0.2);
 
 	--shadow-button: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
 	--shadow-button-hover: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12);
@@ -88,7 +97,7 @@
 }
 
 * {
-	font-family: 'Product Sans', sans-serif !important;
+	font-family: 'Noto Sans TC', sans-serif !important;
 }
 
 
@@ -270,16 +279,19 @@ body,
 
 /* 頻道列表 */
 .container-PNkimc {
-	background: var(--main-color) !important;
+	background: var(--channel-list-color) !important;
 }
 
 /* 頻道上標題 */
 .container-1r6BKw {
-	background: var(--main-color) !important;
+	background: var(--channel-title-color) !important;
+	box-shadow: var(--shadow-channel-title) !important;
 }
 
 
-
+.titleBar-AC4pGV{
+	height:30px !important;
+}
 
 .titleBar-AC4pGV,
 .ui-standard-sidebar-view .sidebar-region,
@@ -1087,7 +1099,7 @@ body,
 
 .typeWindows-1za-n7 {
 	margin-top: 0;
-	padding-top: 4px;
+	padding-top: 0px;
 }
 
 .base-3AoPqv,
@@ -1114,17 +1126,9 @@ body,
 	height: 22px;
 }
 
-.wordmark-2iDDfm:before {
-	content: "Levanah";
-	font-weight: 700;
-}
-
-.wordmark-2iDDfm:after {
-	content: "Discord";
-}
-
 .wordmark-2iDDfm svg {
-	display: none;
+	display: block;
+	height: 30px !important;
 }
 
 .iconWrapper-2OrFZ1 {
@@ -9137,8 +9141,8 @@ div:not([class])[style="opacity: 1; height: 56px; transform: scale(1);"] .listIt
 .clickable-2ap7je .header-2o-2hj:hover,
 .selected-WP3kCM .header-2o-2hj {
 	background-color: var(--main-color) !important;
-	box-shadow: none;
 	transition: 300ms var(--default-animation) all !important;
+	box-shadow: var(--shadow-channel-header) !important;
 }
 
 .clickable-2ap7je .header-2o-2hj:hover,
@@ -9236,7 +9240,6 @@ div:not([class])[style="opacity: 1; height: 56px; transform: scale(1);"] .listIt
 }
 
 .content-3at_AU,
-
 .content-20Aix8,
 .content-OzHfo4,
 .member-3W1lQa,
@@ -9269,14 +9272,12 @@ div:not([class])[style="opacity: 1; height: 56px; transform: scale(1);"] .listIt
 .content-3at_AU,
 .content-20Aix8 {
 	height: 34px;
-	border-radius: 0 17px 17px 0;
 }
 
 .content-OzHfo4,
 .member-3W1lQa,
 .member-3-YXUe {
 	padding: 0 16px;
-	border-radius: 21px 0 0 21px;
 	transition: 200ms ease all;
 }
 
@@ -14150,7 +14151,7 @@ body:active .animatorTop-2Y7x2r .menu-Sp6bN1:not(:active) {
 .search-2oPWTC {
 	padding: 4px 8px;
 	background: var(--hover-color);
-	border-radius: 16px;
+	border-radius: 0px;
 }
 
 .search-2oPWTC .searchBar-3dMhjb {
@@ -15999,101 +16000,16 @@ body:active .animatorTop-2Y7x2r .menu-Sp6bN1:not(:active) {
 	color: #999 !important;
 }
 
-
-/*
- *
- *	FONTS
- *
- */
-
-/* FONTS -> PRODUCT SANS */
-
-/* cyrillic */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: italic;
-	font-weight: 500;
-	src: local('Product Sans Medium Italic'), local('ProductSans-MediumItalic'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-MediumItalic-cyrillic.woff2) format('woff2');
-	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+/* Window Title */
+.winButton-iRh8-Z,
+.winButtonClose-1HsbF-,
+.winButtonMinMax-PBQ2gm {
+	top: 0px !important;
+	height:30px !important;
+	width: 50px !important;
 }
 
-/* latin */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: italic;
-	font-weight: 500;
-	src: local('Product Sans Medium Italic'), local('ProductSans-MediumItalic'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-MediumItalic-latin.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.wordmark-2iDDfm{
+	line-height:30px !important;
 }
 
-/* cyrillic */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: italic;
-	font-weight: 700;
-	src: local('Product Sans Bold Italic'), local('ProductSans-BoldItalic'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-BoldItalic-cyrillic.woff2) format('woff2');
-	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* latin */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: italic;
-	font-weight: 700;
-	src: local('Product Sans Bold Italic'), local('ProductSans-BoldItalic'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-BoldItalic-latin.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* cyrillic */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Product Sans Regular'), local('ProductSans-Regular'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-Regular-cyrillic.woff2) format('woff2');
-	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* latin */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Product Sans Regular'), local('ProductSans-Regular'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-Regular-latin.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* cyrillic */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: normal;
-	font-weight: 500;
-	src: local('Product Sans Medium'), local('ProductSans-Medium'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-Medium-cyrillic.woff2) format('woff2');
-	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* latin */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: normal;
-	font-weight: 500;
-	src: local('Product Sans Medium'), local('ProductSans-Medium'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-Medium-latin.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* cyrillic */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Product Sans Bold'), local('ProductSans-Bold'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-Bold-cyrillic.woff2) format('woff2');
-	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* latin */
-@font-face {
-	font-family: 'Product Sans';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Product Sans Bold'), local('ProductSans-Bold'), url(https://capnkitten.github.io/BetterDiscord/Material-Discord/files/fonts/ProductSans-Bold-latin.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
