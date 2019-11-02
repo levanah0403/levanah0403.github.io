@@ -31,7 +31,7 @@ a { text-decoration: none; }
 .navigation {
   display: block;
   margin: 20px 0;
-  background: #9661ff;
+  background: #ff1601;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 3px;
   z-index: 100000;
@@ -91,7 +91,7 @@ a { text-decoration: none; }
 .navigation li ul.dropdown li:last-child a { border-bottom: none; }
 
 .navigation li:hover a {
-  background: #b289ef;
+  background: #ff4942;
   color: #fff !important;
 }
 
