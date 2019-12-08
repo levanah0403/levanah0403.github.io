@@ -97,7 +97,7 @@ a { text-decoration: none; }
 
 .navigation li:first-child:hover a { border-radius: 3px 0 0 3px; }
 
-.navigation li ul.dropdown li:hover a { background: #56b5ae; }
+.navigation li ul.dropdown li:hover a { background: #ff756e; }
 
 .navigation li ul.dropdown li:first-child:hover a { border-radius: 0; }
 
