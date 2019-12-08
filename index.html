@@ -1,277 +1,279 @@
 <head>
-<script src="https://code.jquery.com/jquery-3.x-git.min.js"></script>
-<!-- script src="https://code.jquery.com/jquery-migrate-git.min.js"></script -->
-
-<link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
-<script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<script src="js/jquery.wavify.js"></script>
+	<script src="https://code.jquery.com/jquery-3.x-git.min.js"></script>
+	<!-- script src="https://code.jquery.com/jquery-migrate-git.min.js"></script -->
 	
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
+	<script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
 	
-<link rel="stylesheet" type="text/css" href="css/navigation.css">
-</head>
-
-
-<div id="main">
-	<div class="container">
-		<nav>
-			<div class="navigation">
-				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="#" tabindex="1">Link<span class="arrow-down"></span></a>
-						<ul class="dropdown">
-							<li><a href="http://jx3.molome.tw/home">官網</a></li>
-							<li><a href="https://forum.gamer.com.tw/B.php?bsn=16357&subbsn=0">巴哈姆特哈拉版</a></li>
-							<li><a href="https://www.j3pz.com/">劍網三配裝器</a></li>
-							<li><a href="http://jx3yymj.com/">隱元秘鑑</a></li>
-              <li><a href="https://forum.gamer.com.tw/C.php?bsn=16357&snA=40732&tnum=6&subbsn=16">5/20過後無法使用MY插件的解決方式</a></li>
-                <li><a href="http://jx3.molome.tw/bulletin/detail/2223">關於副本卡動畫的問題</a></li>
-						</ul>
-					</li>
-					<li><a href="#" tabindex="1">Download<span class="arrow-down"></span></a>
-						<ul class="dropdown">
-              <li><a href="http://jx3download.molome.tw/interface.rar">官方插件下載</a></li>
-              <!--
-              <li><a href="data/nangongbo_180805.zip">茗伊目標監控南宮伯數據180805</a></li>
-              -->
-							<!--
-							<li><a href="data/nangongbo_180504.jx3dat">茗伊目標監控南宮伯數據180504</a></li>
-							-->
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="nav_bg">
-				<div class="nav_bar"> <span></span> <span></span> <span></span> </div>
-			</div>
-		</nav>
-	</div>
-</div>
-
-<script>
-$(document).ready(function(){
-		$('.nav_bar').click(function(){
-			$('.navigation').toggleClass('visible');
-			$('body').toggleClass('opacity');
-		});
-	});
-</script>
-
-
-<div id=loadingdiv style="position: absolute;top: 50%;left: 50%;z-index:9999;" > <img id=loadingpic src="img/loading.svg"> </div>
-<div id=output1 style="width:80%;margin: auto;" > &nbsp; </div>
-
-<br>
-<br>
-
-
-<!-- 提交題目 -->
-<div id=submitdiv style="width:80%;margin: auto;" >
-	<div style="width:100%;margin: auto;border-radius: 10px;background: #FFFFAA;padding: 20px;" >	
-		若要協助更新題庫請在此提交未在題庫內的問題<br>
-		題目: <input type="text" id="questionInput" style="width:80%">
-		<button id=submitbutton>新增題庫</button><br>
-		提交格式:<font color=red>題目：答案</font><br>
-		<div id=idDivOutput> </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<script src="js/jquery.wavify.js"></script>
+		
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+		
+	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+	</head>
+	
+	
+	<div id="main">
+		<div class="container">
+			<nav>
+				<div class="navigation">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="#" tabindex="1">Link<span class="arrow-down"></span></a>
+							<ul class="dropdown">
+								<li><a href="http://jx3.molome.tw/home">官網</a></li>
+								<li><a href="https://forum.gamer.com.tw/B.php?bsn=16357&subbsn=0">巴哈姆特哈拉版</a></li>
+								<li><a href="https://www.j3pz.com/">劍網三配裝器</a></li>
+								<li><a href="http://jx3yymj.com/">隱元秘鑑</a></li>
+								<li><a href="https://forum.gamer.com.tw/C.php?bsn=16357&snA=40732&tnum=6&subbsn=16">5/20過後無法使用MY插件的解決方式</a></li>
+									<li><a href="http://jx3.molome.tw/bulletin/detail/2223">關於副本卡動畫的問題</a></li>
+							</ul>
+						</li>
+						<li><a href="#" tabindex="1">Download<span class="arrow-down"></span></a>
+							<ul class="dropdown">
+								<li><a href="http://jx3download.molome.tw/interface.rar">官方插件下載</a></li>
+								<!--
+								<li><a href="data/nangongbo_180805.zip">茗伊目標監控南宮伯數據180805</a></li>
+								-->
+								<!--
+								<li><a href="data/nangongbo_180504.jx3dat">茗伊目標監控南宮伯數據180504</a></li>
+								-->
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_bg">
+					<div class="nav_bar"> <span></span> <span></span> <span></span> </div>
+				</div>
+			</nav>
+		</div>
 	</div>
 	
-</div>
-<script>
-	$( "#submitbutton" ).button();
-	$( "#submitbutton" ).click( function( event ) {
-		Edit('idDivOutput');
-		event.preventDefault();
-	});
-	$( "#submitdiv" ).hide();
-</script>
-
-
-<script type="text/javascript">
-	function Edit(output){    
-		$.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", { 
-			"act": "Edit",
-                        "idx": -1,
-                        "question" : "(提交)"+document.getElementById("questionInput").value
-		},
-		function (data) {
-			$( "#"+output ).html(data);
-			console.log("submit success");
-			$( "#dialog" ).dialog();
+	<script>
+	$(document).ready(function(){
+			$('.nav_bar').click(function(){
+				$('.navigation').toggleClass('visible');
+				$('body').toggleClass('opacity');
+			});
 		});
-        }
-</script>
-<!-- 提交題目 -->
-
-
-<div id=output2 style="width:80%;margin: auto;" > 
+	</script>
+	
+	
+	<div id=loadingdiv style="position: absolute;top: 50%;left: 50%;z-index:9999;" > <img id=loadingpic src="img/loading.svg"> </div>
+	<div id=output1 style="width:80%;margin: auto;" > &nbsp; </div>
+	
 	<br>
-	<div style="float: right"><!-- img src="img/122942084.jpeg" width=20 hright=20 -->鮮奶@江海雲夢</div>
-</div>
-
-<div id="dialog" title="Message" style="display:none;">
-	<p>提交成功.</p>
-</div>
-
-<script type="text/javascript">
-function addTagButton (id, groupName, value) {
-	return '<label for="' + id + '">' + value + '</label>' + '<input class=tagradio type="radio" name="'+ groupName + '" id="'+ id +'" value="'+ value +'">';
-}	
+	<br>
 	
-(function(window, $) {
-	//https://docs.google.com/spreadsheets/d/1aaEt-mK1HjxOOBf6FFsVelNV9GCurVgcVMOPjmNsPj0/edit#gid=0
-	var sheetID = "1aaEt-mK1HjxOOBf6FFsVelNV9GCurVgcVMOPjmNsPj0", // 試算表代號
-	gid = "0", // 工作表代號
-	sql = encodeURIComponent("select *"); // SQL 語法
-	callback = "callback"; // 回呼函數名稱
-
-	$.getScript("https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&tq=" + sql + "&key=" + sheetID + "&gid=" + gid);
-
-	window[callback] = function(json) {
-		var rowArray = json.table.rows,
-		rowLength = rowArray.length,
-		html = "",
-		i, j, dataGroup, dataLength;
-
-	//	html = html + '<fieldset>';
-		html = html + addTagButton("radio-12", "radio-1", "屈原");
-		html = html + addTagButton("radio-13", "radio-1", "浩氣");
-		html = html + addTagButton("radio-3", "radio-1", "惡人");
-		html = html + addTagButton("radio-14", "radio-1", "大唐");
-		html = html + addTagButton("radio-15", "radio-1", "稻香村");
-	//	html = html + '</fieldset>';
 	
-	//	html = html + '<fieldset>';
-		html = html + '<BR><BR>書籍:<BR>';
-		html = html + addTagButton("radio-1", "radio-1", "青岩");
-		html = html + addTagButton("radio-2", "radio-1", "論語");
-		html = html + addTagButton("radio-4", "radio-1", "南華");
-		html = html + addTagButton("radio-5", "radio-1", "太白");
-		html = html + addTagButton("radio-6", "radio-1", "綠書");
-		html = html + addTagButton("radio-7", "radio-1", "綁定");
-		html = html + addTagButton("radio-8", "radio-1", "天竺");
-		html = html + addTagButton("radio-9", "radio-1", "寶鑑");
-		html = html + addTagButton("radio-11", "radio-1", "孔子");
-		html = html + addTagButton("radio-16", "radio-1", "道德經");
-		html = html + "<BR>";
-		html = html + addTagButton("radio-21", "radio-2", "卷一");
-		html = html + addTagButton("radio-22", "radio-2", "卷二");
-		html = html + addTagButton("radio-23", "radio-2", "卷三");
-		html = html + addTagButton("radio-24", "radio-2", "卷四");
-		html = html + addTagButton("radio-25", "radio-2", "卷五");
-		html = html + addTagButton("radio-26", "radio-2", "卷六");
-		html = html + addTagButton("radio-27", "radio-2", "卷七");
-		html = html + addTagButton("radio-28", "radio-2", "卷八");
-	//	html = html + '<legend>書籍: </legend>';
-	//	html = html + '</fieldset>';
+	<!-- 提交題目 -->
+	<div id=submitdiv style="width:80%;margin: auto;" >
+		<div style="width:100%;margin: auto;border-radius: 10px;background: #FFFFAA;padding: 20px;" >	
+			若要協助更新題庫請在此提交未在題庫內的問題<br>
+			題目: <input type="text" id="questionInput" style="width:80%">
+			<button id=submitbutton>新增題庫</button><br>
+			提交格式:<font color=red>題目：答案</font><br>
+			<div id=idDivOutput> </div>
+		</div>
 		
-	//	html = html + '<fieldset>';
-		html = html + '<BR><BR>門派:<BR>';
-	//	html = html + '<legend>門派: </legend>';
-		html = html + addTagButton("radio-1-1", "radio-1", "霸刀");
-		html = html + addTagButton("radio-1-2", "radio-1", "蒼雲");
-		html = html + addTagButton("radio-1-3", "radio-1", "丐幫");
-		html = html + addTagButton("radio-1-4", "radio-1", "純陽");
-		html = html + addTagButton("radio-1-5", "radio-1", "藏劍");
-		html = html + addTagButton("radio-1-6", "radio-1", "少林");
-		html = html + addTagButton("radio-1-7", "radio-1", "天策");
-		html = html + addTagButton("radio-1-8", "radio-1", "唐門");
-		html = html + addTagButton("radio-1-9", "radio-1", "五毒");
-		html = html + addTagButton("radio-1-10", "radio-1", "七秀");
-		html = html + addTagButton("radio-1-11", "radio-1", "萬花");
-		html = html + addTagButton("radio-1-12", "radio-1", "長歌");
-		html = html + addTagButton("radio-1-13", "radio-1", "明教");
-	//	html = html + '</fieldset>';
+	</div>
+	<script>
+		$( "#submitbutton" ).button();
+		$( "#submitbutton" ).click( function( event ) {
+			Edit('idDivOutput');
+			event.preventDefault();
+		});
+		$( "#submitdiv" ).hide();
+	</script>
+	
+	
+	<script type="text/javascript">
+		function Edit(output){    
+			$.get("https://script.google.com/macros/s/AKfycbz8x4XoU6FqNEjzgXwas91XLXd-3-e5taMlBSTdGChtk62iwhk/exec", { 
+				"act": "Edit",
+				"idx": -1,
+				"question" : "(提交)"+document.getElementById("questionInput").value
+			},
+			function (data) {
+				$( "#"+output ).html(data);
+				console.log("submit success");
+				$( "#dialog" ).dialog();
+			});
+					}
+	</script>
+	<!-- 提交題目 -->
+	
+	
+	<div id=output2 style="width:80%;margin: auto;" > 
+		<br>
+		<div style="float: right"><!-- img src="img/122942084.jpeg" width=20 hright=20 -->鮮奶@江海雲夢</div>
+	</div>
+	
+	<div id="dialog" title="Message" style="display:none;">
+		<p>提交成功.</p>
+	</div>
+	
+	<script type="text/javascript">
+	function addTagButton (id, groupName, value, showName) {
+		return '<label for="' + id + '">' + showName + '</label>' + '<input class=tagradio type="radio" name="'+ groupName + '" id="'+ id +'" value="'+ value +'">';
+	}	
 		
-		html = html + "<BR><BR>";
+	(function(window, $) {
+		//https://docs.google.com/spreadsheets/d/1aaEt-mK1HjxOOBf6FFsVelNV9GCurVgcVMOPjmNsPj0/edit#gid=0
+		var sheetID = "1aaEt-mK1HjxOOBf6FFsVelNV9GCurVgcVMOPjmNsPj0", // 試算表代號
+		gid = "0", // 工作表代號
+		sql = encodeURIComponent("select *"); // SQL 語法
+		callback = "callback"; // 回呼函數名稱
+	
+		$.getScript("https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&tq=" + sql + "&key=" + sheetID + "&gid=" + gid);
+	
+		window[callback] = function(json) {
+			var rowArray = json.table.rows,
+			rowLength = rowArray.length,
+			html = "",
+			i, j, dataGroup, dataLength;
+	
+		//	html = html + '<fieldset>';
+			html = html + addTagButton("radio-12", "radio-1", "屈原", "屈原");
+			html = html + addTagButton("radio-13", "radio-1", "浩氣", "浩氣");
+			html = html + addTagButton("radio-3", "radio-1", "惡人", "惡人");
+			html = html + addTagButton("radio-14", "radio-1", "大唐", "大唐");
+			html = html + addTagButton("radio-15", "radio-1", "稻香村", "稻香村");
+		//	html = html + '</fieldset>';
+		
+		//	html = html + '<fieldset>';
+			html = html + '<BR><BR>書籍:<BR>';
+			html = html + addTagButton("radio-1", "radio-1", "", "任何");
+			html = html + addTagButton("radio-1", "radio-1", "青岩", "青岩");
+			html = html + addTagButton("radio-2", "radio-1", "論語", "論語");
+			html = html + addTagButton("radio-4", "radio-1", "南華", "南華"));
+			html = html + addTagButton("radio-5", "radio-1", "太白", "太白");
+			html = html + addTagButton("radio-6", "radio-1", "綠書", "綠書");
+			html = html + addTagButton("radio-7", "radio-1", "綁定", "綁定");
+			html = html + addTagButton("radio-8", "radio-1", "天竺", "天竺");
+			html = html + addTagButton("radio-9", "radio-1", "寶鑑", "寶鑑");
+			html = html + addTagButton("radio-11", "radio-1", "孔子", "孔子");
+			html = html + addTagButton("radio-16", "radio-1", "道德經", "道德經");
+			html = html + "<BR>";
+			html = html + addTagButton("radio-21", "radio-2", "卷一", "卷一");
+			html = html + addTagButton("radio-22", "radio-2", "卷二", "卷二");
+			html = html + addTagButton("radio-23", "radio-2", "卷三", "卷三");
+			html = html + addTagButton("radio-24", "radio-2", "卷四", "卷四");
+			html = html + addTagButton("radio-25", "radio-2", "卷五", "卷五");
+			html = html + addTagButton("radio-26", "radio-2", "卷六", "卷六");
+			html = html + addTagButton("radio-27", "radio-2", "卷七", "卷七");
+			html = html + addTagButton("radio-28", "radio-2", "卷八", "卷八");
+		//	html = html + '<legend>書籍: </legend>';
+		//	html = html + '</fieldset>';
 			
-		html = html + "<table id='table_id' class='display'>";
-
-		html = html + "<thead>";
-		html = html + "<tr>";
-		html = html + "<th>#</th>";
-		html = html + "<th>題目</th>";
-		html = html + "</tr>";
-		html = html + "</thead>";
+		//	html = html + '<fieldset>';
+			html = html + '<BR><BR>門派:<BR>';
+		//	html = html + '<legend>門派: </legend>';
+			html = html + addTagButton("radio-1-1", "radio-1", "霸刀", "霸刀");
+			html = html + addTagButton("radio-1-2", "radio-1", "蒼雲", "蒼雲");
+			html = html + addTagButton("radio-1-3", "radio-1", "丐幫", "丐幫");
+			html = html + addTagButton("radio-1-4", "radio-1", "純陽", "純陽");
+			html = html + addTagButton("radio-1-5", "radio-1", "藏劍", "藏劍");
+			html = html + addTagButton("radio-1-6", "radio-1", "少林", "少林");
+			html = html + addTagButton("radio-1-7", "radio-1", "天策", "天策");
+			html = html + addTagButton("radio-1-8", "radio-1", "唐門", "唐門");
+			html = html + addTagButton("radio-1-9", "radio-1", "五毒", "五毒");
+			html = html + addTagButton("radio-1-10", "radio-1", "七秀", "七秀");
+			html = html + addTagButton("radio-1-11", "radio-1", "萬花", "萬花");
+			html = html + addTagButton("radio-1-12", "radio-1", "長歌", "長歌");
+			html = html + addTagButton("radio-1-13", "radio-1", "明教", "明教");
+		//	html = html + '</fieldset>';
+			
+			html = html + "<BR><BR>";
+				
+			html = html + "<table id='table_id' class='display'>";
 	
-		html = html + "<tbody>";
-		
-		for (i = 1; i < rowLength; i++) {
+			html = html + "<thead>";
 			html = html + "<tr>";
-			dataGroup = rowArray[i].c;
-			dataLength = dataGroup.length;
-			for (j = 0; j < dataLength; j++) {
-				if (!dataGroup[j]) {
-					continue;
-				}
-				html += "<td>" + i + "</td>";
-				html += "<td>" + (dataGroup[j].f || dataGroup[j].v || "") + " </td>";
-			}
+			html = html + "<th>#</th>";
+			html = html + "<th>題目</th>";
 			html = html + "</tr>";
-		}
+			html = html + "</thead>";
 		
-		html = html + "</tbody>";
+			html = html + "<tbody>";
+			
+			for (i = 1; i < rowLength; i++) {
+				html = html + "<tr>";
+				dataGroup = rowArray[i].c;
+				dataLength = dataGroup.length;
+				for (j = 0; j < dataLength; j++) {
+					if (!dataGroup[j]) {
+						continue;
+					}
+					html += "<td>" + i + "</td>";
+					html += "<td>" + (dataGroup[j].f || dataGroup[j].v || "") + " </td>";
+				}
+				html = html + "</tr>";
+			}
+			
+			html = html + "</tbody>";
+		
+			html = html + "</table>";
+			
+			$( "#output1" ).html("");
+			$( "#output1" ).append( html );
+			$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "200px","scrollCollapse": true,"paging": false});</'+'script>');
+			$( "#output1" ).append('<script>$(".tagradio").checkboxradio();</'+'script>');
+		//	$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
+			$( "#output1" ).append('<script>$("input[name=radio-1]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()).draw();});</'+'script>');
+			$( "#output1" ).append('<script>$("input[name=radio-2]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()+" "+$("input[name=radio-2]:checked").val()).draw();});</'+'script>');
+			$( "#loadingdiv" ).fadeOut(3000);
+			$( "#submitdiv" ).fadeIn();
+		};
+	})(window, jQuery);
+	</script>
 	
-		html = html + "</table>";
-		
-		$( "#output1" ).html("");
-		$( "#output1" ).append( html );
-		$( "#output1" ).append('<script>$("#table_id").DataTable({"scrollY": "200px","scrollCollapse": true,"paging": false});</'+'script>');
-		$( "#output1" ).append('<script>$(".tagradio").checkboxradio();</'+'script>');
-	//	$( "#output1" ).append('<script>$(".tagradio").click(function() {$("#table_id").DataTable().search($(this).val()).draw();});</'+'script>');
-		$( "#output1" ).append('<script>$("input[name=radio-1]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()).draw();});</'+'script>');
-		$( "#output1" ).append('<script>$("input[name=radio-2]").click(function() {$("#table_id").DataTable().search($("input[name=radio-1]:checked").val()+" "+$("input[name=radio-2]:checked").val()).draw();});</'+'script>');
-		$( "#loadingdiv" ).fadeOut(3000);
-		$( "#submitdiv" ).fadeIn();
-	};
-})(window, jQuery);
-</script>
-
-
-
-<style>
-html, body {
-  height: 100%;
-  width: 100%;
-}
-body { background-color:#fafafa;}
-
-.wave {
-  position: fixed;
-  left:0;
-  right:0;
-  top:40%;
-  bottom:0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.wave + .wave {
-  z-index: 3;
-  pointer-events: none;
-}
-h1 { margin:150px auto 50px auto; text-align:center;}
-</style>
-
-<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><title>Wave</title><defs></defs><path id="feel-the-wave" d=""/></svg>
-
-<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><title>Wave</title><defs></defs><path id="feel-the-wave-two" d=""/></svg>
-<script>
-$('#feel-the-wave').wavify({
-  height: 80,
-  bones: 4,
-  amplitude: 60,
-  color: 'rgba(255, 137, 137, .1)',
-  speed: .15
-});
-
-$('#feel-the-wave-two').wavify({
-  height: 60,
-  bones: 3,
-  amplitude: 40,
-  color: 'rgba(255, 97, 97, .05)',
-  speed: .25
-});
-</script>
+	
+	
+	<style>
+	html, body {
+		height: 100%;
+		width: 100%;
+	}
+	body { background-color:#fafafa;}
+	
+	.wave {
+		position: fixed;
+		left:0;
+		right:0;
+		top:40%;
+		bottom:0;
+		z-index: 2;
+		pointer-events: none;
+	}
+	
+	.wave + .wave {
+		z-index: 3;
+		pointer-events: none;
+	}
+	h1 { margin:150px auto 50px auto; text-align:center;}
+	</style>
+	
+	<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><title>Wave</title><defs></defs><path id="feel-the-wave" d=""/></svg>
+	
+	<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><title>Wave</title><defs></defs><path id="feel-the-wave-two" d=""/></svg>
+	<script>
+	$('#feel-the-wave').wavify({
+		height: 80,
+		bones: 4,
+		amplitude: 60,
+		color: 'rgba(255, 137, 137, .1)',
+		speed: .15
+	});
+	
+	$('#feel-the-wave-two').wavify({
+		height: 60,
+		bones: 3,
+		amplitude: 40,
+		color: 'rgba(255, 97, 97, .05)',
+		speed: .25
+	});
+	</script>
+	
